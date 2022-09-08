@@ -1,0 +1,29 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.nav_logo_container,
+.nav_contents {
+  display: flex;
+  flex-direction: space-between;
+  align-items: center;
+  width: 100%;
+}
+.nav_logo {
+  height: 3rem;
+  width: 4rem;
+}
+.nav_avatar {
+  height: 2rem;
+  width: 2rem;
+}
+.nav_dark {
+  background-color: #030d45;
+}
+.brand_light {
+  color: #fff;
+}
+.brand_dark {
+  color: #030d45;
+}
