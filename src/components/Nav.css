@@ -1,14 +1,26 @@
 .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  width: 100%;
   z-index: 1;
+  width: 100%;
+  min-height: 10vh;
 }
-.nav_logo_container,
 .nav_contents {
   display: flex;
-  flex-direction: space-between;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 0.25rem;
+}
+.nav_logo_container {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+.nav_avatar_container {
+  margin-right: 0.5rem;
 }
 .nav_logo {
   height: 3rem;

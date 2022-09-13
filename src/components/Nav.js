@@ -29,7 +29,7 @@ const Nav = (props) => {
           />
           <h1 className={navDark ? "brand_light" : "brand_dark"}>Movies Now</h1>
         </div>
-        <div>
+        <div className="nav_avatar_container">
           <img
             className="nav_avatar"
             src={navDark ? LightAvatar : DarkAvatar}
