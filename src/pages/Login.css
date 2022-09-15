@@ -1,0 +1,71 @@
+.login {
+  position: relative;
+  /* background-image: url("https://img.helpnetsecurity.com/wp-content/uploads/2020/03/23143409/netflix-collection.jpg");
+  object-fit: contain;
+  background-position: cover;
+  background-repeat: no-repeat; */
+  width: 100%;
+  height: 100vh;
+  background: #020440;
+  background: -webkit-linear-gradient(top left, #020440, #0466a5);
+  background: -moz-linear-gradient(top left, #020440, #0466a5);
+  background: linear-gradient(to bottom right, #020440, #0466a5);
+}
+.login_nav_logo {
+  position: fixed;
+  top: 0;
+  left: 5px;
+  width: 3rem;
+  height: auto;
+  padding: 0.5rem;
+}
+
+.login_nav_button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  color: #020440;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  margin: 0.75rem 0.5rem;
+}
+
+.login_body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+  line-height: 2;
+}
+.login_form {
+  margin: 1rem;
+}
+.login_form_input {
+  height: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  width: 50%;
+  border: none;
+  outline: none;
+}
+
+.login_form_input:focus {
+  outline: none;
+}
+.login_form_button {
+  height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  background-color: #020440;
+}
