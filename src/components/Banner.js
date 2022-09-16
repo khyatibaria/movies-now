@@ -12,7 +12,6 @@ const Banner = (props) => {
       const response = await instance.get(api);
       const result = response.data.results;
       const randomBanner = Math.ceil(Math.random() * result.length);
-      console.log(result[randomBanner]);
       setBanner(result[randomBanner]);
     }
     getBanner(getMovies.trending);
@@ -22,7 +21,6 @@ const Banner = (props) => {
       className="banner"
       style={{
         backgroundImage: `url(http://image.tmdb.org/t/p/original/${banner?.backdrop_path})`,
-        // backgroundPosition: "center center",
         backgroundSize: "cover",
       }}
     >
