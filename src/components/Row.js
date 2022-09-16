@@ -9,7 +9,6 @@ const Row = (props) => {
     async function getPosters(api) {
       const response = await instance.get(api);
       const result = response.data.results;
-      console.log(result);
       setAllPosters(result);
     }
     getPosters(api);
