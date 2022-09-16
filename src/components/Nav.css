@@ -25,10 +25,12 @@
 .nav_logo {
   height: 3rem;
   width: 4rem;
+  cursor: pointer;
 }
 .nav_avatar {
   height: 2rem;
   width: 2rem;
+  cursor: pointer;
 }
 .nav_dark {
   background-color: #030d45;
