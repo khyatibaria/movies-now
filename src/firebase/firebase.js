@@ -1,4 +1,7 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+
 const firebaseConfig = {
   apiKey: "AIzaSyD17ALNgblPjAlKlvP3pHYw6ftZCmKOVw4",
   authDomain: "movies-now-33222.firebaseapp.com",
@@ -8,3 +11,9 @@ const firebaseConfig = {
   appId: "1:552624759120:web:44fe03d044dc218faf8c55",
   measurementId: "G-4YW53YR2CS",
 };
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+export const auth = getAuth(app);
+
+export default db;
