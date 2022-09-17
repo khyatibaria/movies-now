@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { movieDetails } from "../features/userSlice";
 import "./Row.css";
-import instance from "../services";
+import instance from "../services/index";
 const Row = (props) => {
   const { title, api, isPosterLarge = false, dispatchFunction } = props;
   const [allPosters, setAllPosters] = useState([]);
