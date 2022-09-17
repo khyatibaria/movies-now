@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { movieBanner, movieDetails } from "../features/userSlice";
-import instance from "../services/index";
 import { getMovies } from "../services/getMovies";
+import instance from "../services/index";
 import "./Banner.css";
 
 const Banner = (props) => {
@@ -51,7 +51,14 @@ const Banner = (props) => {
           >
             Play
           </button>
-          <button className="banner_button">My List</button>
+          <button
+            className="banner_button"
+            onClick={() => {
+              navigate("/list");
+            }}
+          >
+            My List
+          </button>
         </div>
         <div className="banner_discription">{banner?.overview}</div>
       </div>

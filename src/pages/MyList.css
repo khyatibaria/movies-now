@@ -1,0 +1,10 @@
+.mylist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+  height: 100vh;
+  padding: 1rem;
+}

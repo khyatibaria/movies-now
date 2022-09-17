@@ -13,7 +13,7 @@ const Row = (props) => {
   // const allMovies = useSelector((state) => state.user.dispatchFunction);
 
   async function movieTrailer(api) {
-    const response = await instance.get(api);
+    const response = await instance.get(api, { crossdomain: true });
     dispatch(movieDetails(response.data));
   }
 

@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Movie from "./pages/Movie";
 import NoMatch from "./pages/NoMatch";
+import MyList from "./pages/MyList";
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
@@ -44,7 +45,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/movie" element={<Movie />} />
-          <Route path="*" element={<NoMatch />} />
+          {/* <Route path="*" element={<NoMatch />} /> */}
+          <Route path="/list" element={<MyList />} />
         </Routes>
       )}
     </>
