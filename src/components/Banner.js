@@ -1,21 +1,32 @@
 import { useEffect, useState } from "react";
-import "./Banner.css";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { movieBanner, movieDetails } from "../features/userSlice";
 import instance from "../services/index";
 import { getMovies } from "../services/getMovies";
+import "./Banner.css";
 
 const Banner = (props) => {
-  const [banner, setBanner] = useState(null);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const banner = useSelector((state) => state.user.banner);
   const image_key = "http://image.tmdb.org/t/p/";
+
+  async function movieTrailer(api) {
+    const response = await instance.get(api);
+    dispatch(movieDetails(response.data));
+  }
 
   useEffect(() => {
     async function getBanner(api) {
       const response = await instance.get(api);
       const result = response.data.results;
       const randomBanner = Math.ceil(Math.random() * result.length);
-      setBanner(result[randomBanner]);
+      dispatch(movieBanner(result[randomBanner]));
     }
     getBanner(getMovies.trending);
   }, []);
+
   return (
     <div
       className="banner"
@@ -29,7 +40,17 @@ const Banner = (props) => {
           {banner?.title || banner?.original_title}
         </div>
         <div className="banner_buttons">
-          <button className="banner_button">Play</button>
+          <button
+            className="banner_button"
+            onClick={() => {
+              navigate("/movie");
+              movieTrailer(
+                `/movie/${banner.id}?api_key=1824961edc062d8424ef9ee0d68162a1&append_to_response=videos`
+              );
+            }}
+          >
+            Play
+          </button>
           <button className="banner_button">My List</button>
         </div>
         <div className="banner_discription">{banner?.overview}</div>

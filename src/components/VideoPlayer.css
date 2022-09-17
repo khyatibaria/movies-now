@@ -1,0 +1,7 @@
+.videoplayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 70vh;
+}

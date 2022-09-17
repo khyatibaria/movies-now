@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import Movie from "./pages/Movie";
 import NoMatch from "./pages/NoMatch";
 function App() {
   const user = useSelector(selectUser);
@@ -42,6 +43,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/movie" element={<Movie />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
       )}

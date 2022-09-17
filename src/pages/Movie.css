@@ -1,0 +1,30 @@
+.movie {
+  max-width: 100%;
+  height: 30vh;
+  padding: 1.5rem;
+  color: #fff;
+  background: #020440;
+  background: -webkit-linear-gradient(top left, #020440, #0466a5);
+  background: -moz-linear-gradient(top left, #020440, #0466a5);
+  background: linear-gradient(to bottom right, #020440, #0466a5);
+}
+.movie_overview,
+.movie_ratings {
+  margin-top: 1rem;
+}
+.movie_name_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie_add {
+  padding: 0.5rem 0.75rem;
+  color: #020440;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}

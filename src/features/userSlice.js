@@ -1,7 +1,10 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   user: null,
+  banner: null,
+  movie: null,
+  allMovies: null,
 };
 
 export const userSlice = createSlice({
@@ -14,11 +17,28 @@ export const userSlice = createSlice({
     logout: (state) => {
       state.user = null;
     },
+    movieBanner: (state, action) => {
+      state.banner = action.payload;
+    },
+    movieDetails: (state, action) => {
+      state.movie = action.payload;
+    },
+    trendingMovie: (state, action) => {
+      state.trending = action.payload;
+    },
+    movies: (state, action) => {
+      switch (action.type) {
+        case "trending": {
+          return (state.trending = action.payload);
+        }
+      }
+    },
   },
 });
 
-export const { login, logout } = userSlice.actions;
+export const { login, logout, movieDetails, movieBanner } = userSlice.actions;
 
 export const selectUser = (state) => state.user.user;
+export const selectMovie = (state) => state.user.movie;
 
 export default userSlice.reducer;
